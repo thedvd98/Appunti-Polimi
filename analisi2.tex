@@ -1,0 +1,128 @@
+\documentclass[16pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newcommand{\ud}{\,\mathrm{d}}
+
+\title{Analisi 2}
+
+\begin{document}
+\maketitle
+
+\section{Cose a caso di base}
+\paragraph{Definizione di o-piccolo} Sia $f(x) = o(g(x))$ per $x \rightarrow \infty$ allora:
+\begin{equation*}
+	\lim_{x \rightarrow \infty}
+	\frac{f(x)}{g(x)} = 0
+\end{equation*}
+\indent E vuol dire che f(x) ha ordine di grandezza più basso di g(x)
+
+
+\section{Derivate}
+\subsection{Derivate da sapere come se si contasse da uno a 10}
+\begin{center}
+\begin{tabular}{r | l}
+	f(x) & $\frac{df(x)}{dx}$ \\ [1ex]
+	\hline
+	$\tan(x)$	& $\frac{1}{\cos^2(x)} = \sec^2(x)$ \\ [0.5ex]
+	$a^x$		& $a^x \log(a)$ \\ [0.5ex]
+\end{tabular}
+\end{center}
+
+\subsection{Chain Rule}
+
+Sia $u = f(\xi, \eta, ...)$ una funzione con argomenti che sono loro stessi funzioni.
+\begin{align*}
+	\xi = \Phi(x,y) \\
+	\eta = \Psi(x,y)
+\end{align*}
+Le sue derivate parziali saranno date da:
+\begin{align*}
+	u_x = f_\xi \xi_x + f_\eta \eta_x + . . . \\
+	u_y = f_\xi \xi_y + f_\eta \eta_y + . . .
+\end{align*}
+
+\paragraph{Esempio:}
+Derivata di $x^x$
+\begin{align*}
+	[u = x, v = x, z = u^v] \\
+	z_x = z_u u_x + z_v v_x = vu^{v-1} + u^v\log(u) \\
+	= xx^{x-1} + x^x\log(x)
+\end{align*}
+
+
+\subsection{Differenziabilità}
+
+\subsubsection{Funzione differenziabile} Una funzione è differenziabile nel punto $(0,0)$ se può essere approssimata nelle vicinanze di questo punto dalla seguente funzione lineare:
+\begin{equation}
+	f(x+h, y+k) = f_x(x,y)h + f_y(x,y)k + f(x,y) + \varepsilon \sqrt{h^2 + k^2}
+\end{equation}
+dove $\varepsilon, h, k \rightarrow 0$ e $\sqrt{h^2 + k^2}$ denota la distanza tra il punto $(x+h,x+k) \text{ e } (x,y)$
+Le funzioni differenziabili hanno le derivate parziali e anche le derivate in ogni direzione.
+\paragraph{Il Piano tangente} nel punto $(\xi, \eta)$:
+\begin{equation}
+	z(x,y) = f(\xi, \eta) + f_{x}(x - \xi) + f_{y}(y-\eta)
+\end{equation}
+\subsubsection{Derivate direzionali}
+\begin{align*}
+	D_{\theta}f(x,y) & = \lim_{\rho \rightarrow 0} \frac{f(x+\rho \cos\theta, y+\rho\sin\theta) - f(x,y)}{\rho} \\
+			   & = f_x \cos(\theta) + f_y \sin(\theta)
+\end{align*}
+\paragraph{Gradiente}: $\vec{\nabla f} = \Big(f_x(x,y), f_y(x,y)\Big)$, esso è il vettore che indica la direzione della massima pendenza sul grafico ed è sempre perpendicolare alle curve di livello.
+\begin{align*}
+	D_{\hat{v}}f(x,y) = \vec{\nabla f} \cdot \hat{v}
+\end{align*}
+Dove $\hat{v}$ è un versore.
+\paragraph{Piano Tangente}
+
+\begin{equation*}
+\end{equation*}
+`
+\section{Integrali}
+\subsection{Tecniche di integrazione}
+
+\subsubsection{Per sostituzione}
+
+\subsubsection{Per parti}
+\begin{equation}
+	\int f'(x) g(x) \mathrm{d}x = f(x)g(x) - \int f(x) g'(x)\ud x
+\end{equation}
+Per risolvere tipo $\int \ln(x) \ud x$ o $\int x \sin(x) \ud x$
+\subsubsection{Funzioni Trigonometriche}
+
+\begin{equation}
+	\int \cos^2(t)dt = \frac{t+\sin(t)\cos(t)}{2}
+\end{equation}
+\begin{equation}
+	\int \sin^2(t)dt = \frac{t-\sin(t)\cos(t)}{2}
+\end{equation}
+Questa formula deriva da alcune formule trigonometriche a me oscure cioè $\cos^2x = \frac{1}{2} (1+\cos(2x))$ e l'equivalente per il seno $\sin^2x=\frac{1}{2}(1-\cos(2x))$
+
+\begin{equation}
+	\int cos^2(2t)dt = \frac{4t+sin(4t)}{8}
+\end{equation}
+
+\subsection{Integrali Multipli}
+\subsubsection{Trasformazioni Polari}
+\paragraph{Matrice Jacobiana} è la matrice delle derivate parziali delle funzioni che vengono sostituite.\\
+$x = f(u,v)$\\
+$y = g(u,v)$
+
+Area Parallelogramma
+\begin{math}
+\displaystyle {
+\begin{aligned}\mathbf {a} \times \mathbf {b} = \det{
+	\begin{bmatrix}
+		a_{1} & b_{1}\\
+		a_{2} & b_{2}
+	\end{bmatrix}
+	}
+\end{aligned}
+}
+\end{math}
+
+\begin{equation}
+	\int\int_{D} f(u,v) g(u,v)|D|\ud u \ud v
+\end{equation}
+\end{document}
