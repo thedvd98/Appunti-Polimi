@@ -1,5 +1,5 @@
 \subsection{Integrali Multipli}
-\subsubsection{Trasformazioni Polari}
+\subsubsection{Trasformazioni}
 \paragraph{Matrice Jacobiana} è la matrice delle derivate parziali delle funzioni che vengono sostituite.\\
 $x = f(u,v)$\\
 $y = g(u,v)$
@@ -15,9 +15,20 @@ Area Parallelogramma
 	}
 \end{aligned}
 }
-\end{math}
+\end{math}\\
+
+\begin{align}\mathbf {D} = \det{
+	\begin{bmatrix}
+		\dfrac{\partial f}{\partial u} & \dfrac{\partial g}{\partial u}\\[1em]
+		\dfrac{\partial f}{\partial v} & \dfrac{\partial g}{\partial v}
+	\end{bmatrix}
+	}
+	\tag{determinante matrice Jacobiana}
+\end{align}
+}
 
 \begin{equation}
 	\int\int_{D} f(u,v) g(u,v)|D|\ud u \ud v
 \end{equation}
+Nel caso delle \textbf{trasformazioni polari} $|D|$ sarà sempre uguale a $\rho$.
 
