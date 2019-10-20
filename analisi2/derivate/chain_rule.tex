@@ -1,0 +1,23 @@
+\subsection{Chain Rule}
+
+Sia $u = f(\xi, \eta, ...)$ una funzione con argomenti che sono loro stessi funzioni.
+\begin{align*}
+	\xi = \Phi(x,y) \\
+	\eta = \Psi(x,y)
+\end{align*}
+Le sue derivate parziali saranno date da:
+\begin{align*}
+	u_x = f_\xi \xi_x + f_\eta \eta_x + . . . \\
+	u_y = f_\xi \xi_y + f_\eta \eta_y + . . .
+\end{align*}
+
+\paragraph{Esempio:}
+Derivata di $x^x$
+\begin{align*}
+	[u = x, v = x, z = u^v] \\
+	z_x = z_u u_x + z_v v_x = vu^{v-1} + u^v\log(u) \\
+	= xx^{x-1} + x^x\log(x)
+\end{align*}
+
+
+

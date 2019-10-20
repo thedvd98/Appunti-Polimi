@@ -1,0 +1,14 @@
+\subsection{Trasformata di Fourier}
+\textbf{L'antitrasformata di Fourier}
+\begin{equation}
+	s(t) = \mathcal{F}^{-1}\{S(f)\}= \int_{-\infty}^{\infty}S(f)\,e^{j\,2\pi ft}\ud f
+\end{equation}
+$S(f)$ viene chimata \textbf{trasformata di Fourier}
+\begin{equation}
+	S(f) = \mathcal{F} \{s(t)\} = \int_{-\infty}^{\infty} s(t)e^{-j2\pi ft} \ud t
+\end{equation}
+\paragraph{Segnale ritardato} Sia s(t) un segnale, il segnale ritardato $z(t) = s(t-\tau)$ ha trasformata
+\begin{equation}\label{trasformata_segnale_ritardato}
+	Z(f) = \mathcal{F}\{s(t-\tau)\} = S(f)e^{-j2\pi f\tau}
+\end{equation}
+

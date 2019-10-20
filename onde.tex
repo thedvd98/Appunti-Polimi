@@ -1,34 +1,15 @@
-\documentclass[16pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsthm}
-
-%\newcommand{\ud}{\,\mathrm{d}}
+\input{header.tex}
 
 \title{Onde Elettromagnetiche e Mezzi Trasmissivi}
 
 \begin{document}
 \maketitle
+\tableofcontents
 
 \section{Basi}
-
-\paragraph{Banda del Segnale} $\mathbf{B_s}$ insieme delle frequenze contenute nel segnale.
-\paragraph{Banda Passante} $\mathbf{B_m}$ insieme di frequenze che soddisfano una certa qualità.
-
-\subsubsection{Attenuazione}
-L'ampiezza di un onda elettromagnetica viene attenuata in maniera di tipo esponenziale $e^{-\alpha z}$.
-\paragraph{Attenuazione} $\alpha [Np/m]$
-\paragraph{Fattore di conversione} per ottenere $\alpha$ in [dB/m] avendo $\alpha$ in [Np/m]
-\begin{align*}
-	\alpha_{dB}z &= -10\log_{10}e^{-2\alpha z} \\
-		     & = \mathbf{8.68\, \alpha\,z} \\
-	\alpha_{dB} &=\mathbf{8.68\, \alpha}
-\end{align*}
-\subsubsection{Velocità}
-\paragraph{Costante dielettrica relativa:}  $\mathbf{\varepsilon_r}$ dipende dal mezzo di trasmissione
-\paragraph{Indice di rifrazione:} $\mathbf{n=\sqrt{\varepsilon_r}}$
-\begin{equation}
-	v_f = \frac{c}{\sqrt{\varepsilon_r}} = \frac{c}{n}
-\end{equation}
-
+\input{onde/basi/par_di_base.tex}
+\input{onde/basi/fasori.tex}
+\input{onde/basi/trasformata_fourier.tex}
+\input{onde/basi/funzione_di_trasferimento.tex}
+\input{onde/basi/problemi.tex}
 \end{document}

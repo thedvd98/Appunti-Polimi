@@ -1,0 +1,25 @@
+\subsection{Differenziabilità}
+
+\subsubsection{Funzione differenziabile} Una funzione è differenziabile nel punto $(0,0)$ se può essere approssimata nelle vicinanze di questo punto dalla seguente funzione lineare:
+\begin{equation}
+	f(x+h, y+k) = f_x(x,y)h + f_y(x,y)k + f(x,y) + \varepsilon \sqrt{h^2 + k^2}
+\end{equation}
+dove $\varepsilon, h, k \rightarrow 0$ e $\sqrt{h^2 + k^2}$ denota la distanza tra il punto $(x+h,x+k) \text{ e } (x,y)$
+Le funzioni differenziabili hanno le derivate parziali e anche le derivate in ogni direzione.
+
+\paragraph{Il Piano tangente} nel punto $(\xi, \eta)$:
+\begin{equation}
+	z(x,y) = f(\xi, \eta) + f_{x}(x - \xi) + f_{y}(y-\eta)
+\end{equation}
+
+\subsubsection{Derivate direzionali}
+\begin{align*}
+	D_{\theta}f(x,y) & = \lim_{\rho \rightarrow 0} \frac{f(x+\rho \cos\theta, y+\rho\sin\theta) - f(x,y)}{\rho} \\
+			   & = f_x \cos(\theta) + f_y \sin(\theta)
+\end{align*}
+\paragraph{Gradiente}: $\vec{\nabla f} = \Big(f_x(x,y), f_y(x,y)\Big)$, esso è il vettore che indica la direzione della massima pendenza sul grafico ed è sempre perpendicolare alle curve di livello.
+\begin{align*}
+	D_{\hat{v}}f(x,y) = \vec{\nabla f} \cdot \hat{v}
+\end{align*}
+Dove $\hat{v}$ è un versore.
+

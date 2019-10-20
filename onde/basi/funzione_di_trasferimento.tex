@@ -1,0 +1,31 @@
+\subsection{Funzione di trasferimento}
+\begin{equation*}
+	H(f) = |H(f)|e^{j\varphi_H(f)}
+\end{equation*}
+Dove:
+\begin{itemize}
+	\item $\varphi_H$ è il ritardo di fase
+	\item $|H(f)|$ indica l'ampiezza delle armoniche in uscita
+	\item $|H(f)|^2$ indica la relazione tra potenza d'ingresso e d'uscita
+\end{itemize}
+
+\begin{equation*}
+	S_{out}(f) = S_{in}(f)H(f)
+\end{equation*}
+
+\subsubsection{Esempi}
+\begin{itemize}
+	\item Se $H(f) = H_0$ allora il mezzo \textbf{NON distorce il segnale
+		ma lo attenua} ($H_0 < 1)$ del fattore costante $H_0$.\\
+		Per esempio se $H_0 = 0.2$ l'ampiezza del segnale viene ridotta dell'$80\%$
+	\item Se $H(f) = H_0 e^{j\varphi_{H_0}}$ con tutto indipendente dalla frequenza, questo mezzo non genera un ritardo temporale ma \textbf{le componenti armoniche subiscono uno sfasamento comune}. Infatti $S(f) H(f) = \int_{-\infty}^{\infty} s(t)e^{-j(2\pi ft - \varphi_{H_0})}$
+	\item $H(f) = H_0 e^{-j2\pi f\tau}$ l'attenuazione è costante mentre \textbf{la fase ha una dipendenza lineare con la frequenza}. Dalla \eqref{trasformata_segnale_ritardato} si ottiene
+		\begin{equation}
+			s_{out} = H_0 s_{in}(t-\tau)
+		\end{equation}
+		\begin{equation}
+			\tau_g = -\frac{1}{2\pi} \frac{\ud \varphi_H(f)}{\ud f} \qquad [s]. \tag{ritardo di gruppo}
+		\end{equation}
+		in questo caso $\tau_g = \tau$.
+	\item Se $\varphi_H$ non è lineare. Ogni armonica si propaga con una velocità diversa infatti $\tau_g(f)$ sarà dipendente dalla frequenza. Questa dipendenza è detta \textbf{dispersione cromatica}.
+\end{itemize}

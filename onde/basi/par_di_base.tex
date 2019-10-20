@@ -1,0 +1,30 @@
+\subsection{Parametri di base}
+\paragraph{Banda del Segnale} $\mathbf{B_s}$ insieme delle frequenze contenute nel segnale.
+\paragraph{Banda Passante} $\mathbf{B_m}$ insieme di frequenze che soddisfano una certa qualità.
+
+\subsubsection{Attenuazione}
+L'ampiezza di un onda elettromagnetica viene attenuata in maniera di tipo esponenziale $e^{-\alpha z}$.
+\paragraph{Attenuazione} $\alpha [Np/m]$
+\paragraph{Fattore di conversione} per ottenere $\alpha$ in [dB/m] avendo $\alpha$ in [Np/m]
+\begin{align*}
+	\alpha_{dB}z &= -10\log_{10}e^{-2\alpha z} \\
+		     & = \mathbf{8.68\, \alpha\,z} \\
+	\alpha_{dB} &=\mathbf{8.68\, \alpha}
+\end{align*}
+
+\subsubsection{Velocità}
+\paragraph{Costante dielettrica relativa:}  $\mathbf{\varepsilon_r}$ dipende dal mezzo di trasmissione
+\paragraph{Indice di rifrazione:} $\mathbf{n=\sqrt{\varepsilon_r}}$
+\begin{equation}
+	v_f = \frac{c}{\sqrt{\varepsilon_r}} = \frac{c}{n}
+\end{equation}
+
+\paragraph{Ritardo}
+\begin{equation*}
+	\tau = \frac{l}{v} = \frac{l}{c}n
+\end{equation*}
+
+\subsubsection{Lunghezza d'onda}
+\begin{equation*}
+	\lambda = \frac{v_f}{f} = \frac{c}{nf}\quad[m]
+\end{equation*}
