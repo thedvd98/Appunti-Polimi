@@ -1,0 +1,81 @@
+\include{header}
+% Commento
+\usepackage{circuitikzgit}
+\usepackage{empheq}
+
+\title{Elettrotecnica}
+
+\begin{document}
+\maketitle
+\section{Cenni di elettromagnetismo}
+\input{elettrotecnica/elettromagnetismo.tex}
+
+\section{Legge di Ohm}
+Legge di Ohm:
+\[V = RI\]
+\[R = \Omega \qquad I = [A] \qquad V = [V] \]
+
+\section{LKT}
+\[\sum_{k=0}^{n} V_k = 0\]
+\section{LKC}
+\[\sum_{k=0}^{n} I_k = 0\]
+
+\section{Tripoli}
+	Circuito a stella:
+\begin{center}
+	\begin{circuitikz}
+		\ctikzset{label/align = straight}
+		\draw
+		(0,0) to[R, l=\(R_a\), i>^=\(i_1\)] (2,-2) {}
+		(2,-2) to[R, l=\(R_b\), i^<=\(i_2\)] (4,0)
+		(2, -2) to[R, l=\(R_c\), i=\(i_3\)] (2, -4.5)
+	;\end{circuitikz}
+\end{center}
+	Triangolo di resistori:
+\begin{center}
+	\begin{circuitikz}
+		\ctikzset{label/align = straight}
+		\draw
+		(-2,0) to[short, i>^=\(i_1\)] (0,0)
+		(0,0) to[R, l=\(R_2\), i>^=\(i_c\), *-*] (4,0)
+		(4,0) to[short, i^<=\(i_2\)] (6,0)
+		(4,0) to[R, a=\(R_3\), i=\(i_a\), *-*] (2,-3)
+		(0, 0) to[R, l=\(R_1\), i=\(i_b\), *-*] (2, -3)
+		(2,-3) to[short, i=\(i_3\)] (2,-5)
+	;\end{circuitikz}
+\end{center}
+Trasformazioni:
+
+Circuito a triangolo \(\rightarrow\) stella
+\begin{empheq}[box=\fbox]{align*}
+R_a = \frac{R_1R_2}{R_1+R_2+R_3}\\
+\\
+R_b = \frac{R_2R_3}{R_1+R_2+R_3}\\
+\\
+R_c = \frac{R_1R_3}{R_1+R_2+R_3}
+\end{empheq}
+Circuito a stella \(\rightarrow\) triangolo 
+\begin{empheq}[box=\fbox]{align*}
+R_1 = R_a + R_b + \frac{R_aR_b}{R_c}\\
+\\
+R_2 = R_a + R_c + \frac{R_aR_c}{R_b}\\
+\\
+R_3 = R_c + R_b + \frac{R_cR_b}{R_a}
+\end{empheq}
+\section{Amplificatori operazionali}
+\begin{center}
+	\begin{circuitikz} \draw
+		(0,0) node[op amp] (opamp) {}
+		(opamp.+) node[left] {$v_+$}
+		 (opamp.-) node[left] {$v_-$}
+		 (opamp.out) node[right] {$v_o$}
+		 (opamp.down) --++(0,-0.5) node[vee]{}
+	;\end{circuitikz}
+\end{center}
+
+\(V_0\)\qquad Tensione tra terminale di uscita e terra
+\(V_d = V_{in} = V_+ - V_-\)
+
+Nell' OpAmp Ideale le correnti d'ingresso sono nulle e \(V_d = 0\)
+
+\end{document}
