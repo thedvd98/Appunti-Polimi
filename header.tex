@@ -1,9 +1,16 @@
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage{amsfonts} %per mathfrak
 \usepackage{hyperref}
+
+% Tuttta sta roba per far apparire degli abs decenti
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
 
 \newcommand{\ud}{\,\mathrm{d}}
 \author{Davide}
