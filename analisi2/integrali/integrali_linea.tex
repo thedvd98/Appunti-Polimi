@@ -37,3 +37,36 @@ Altra formula:
 \begin{equation*}
 	A = \int\int_{R} \sqrt{f_x ^2 + f_y ^2 + f_z ^2} \abs{\frac{1}{f_z}} \,\ud x \ud y
 \end{equation*}
+
+\subsubsection{Integrali su campi vettoriali}
+\paragraph{Lavoro}
+Sia $\mathbf{F} = P(x,y)\hat{i} + Q(x,y)\hat{j}$ un campo vettoriale (per esempio una forza che cambia a seconda della posizione x,y).\\
+Mentre $\ud \mathbf{S} = \ud x \hat{i} + \ud y \hat{j}$ cioè il vettore tangente alla curva.\\
+L'integrale di linea di F lungo la linea C è dato da:
+\begin{equation*}
+	\int_{C} \mathbf{F} \cdot \ud\mathbf{S} = \int_{C} P(x,y)\ud x + Q(x,y) \ud y
+\end{equation*}
+
+\paragraph{Funzione Potenziale}
+Una $f(x,y)$ è una funzione potenziale di un campo vettoriale $F = P\hat{i} + Q\hat{j}$ se il gradiente di f è $P\hat{i} + Q\hat{j}$. \\
+Non tutti i campi vettoriali hanno una funzione potenziale.\\
+
+\begin{teorema}[Teorema per la verifica dell'esistenza di una funzione potenziale]
+	Un campo vettoriale $P i+ Qj$ ha una funzione potenziale se e solo se
+	\begin{equation*}
+		\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}
+	\end{equation*}
+\end{teorema}
+Un \textbf{differenziale} è \textbf{esatto} se vale la qua sopra citata formula.
+\begin{teorema}[Percorso indipendente]
+	Sia f una funzione potenziale del campo vettoriale $Pi+Qj$
+	\begin{equation}
+		\int_{C} P \ud x + Q \ud y = f(B)-f(A) = \int_{A}^{B} P\ud x + Q\ud y
+	\end{equation}
+	Permette di trovare anche la funzione potenziale dal campo vettoriale.
+	Sia g una funzione potenziale se e solo se g si può scrivere nel seguente modo:
+	\begin{equation*}
+		g(x,y) = \int_{A}^{(x,y)}P\ud x + Q \ud y + K
+	\end{equation*}
+\end{teorema}
+Un Campo vettoriale con una funzione potenziale viene detto \textbf{Campo conservativo}.\\
